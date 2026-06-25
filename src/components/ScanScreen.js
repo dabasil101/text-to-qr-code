@@ -21,18 +21,17 @@ export default function ScanScreen() {
     );
   }
 
-  const handleBarcodeScanned = ({ data }: { data: string }) => {
+  const handleBarcodeScanned = ({ data }) => {
     if (data && data !== scannedText) {
       setScannedText(data);
     }
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-      {/* Native View container with overflow protection instead of a Card fixes the projection issue */}
-      <View style={[styles.cameraContainer, { borderColor: theme.colors.outlineVariant }]}>
+    <View style={styles.container}>
+      <Card style={styles.cameraCard}>
         <CameraView
-          // style={StyleSheet.absoluteFillObject}
+          style={StyleSheet.absoluteFillObject}
           facing="back"
           onBarcodeScanned={handleBarcodeScanned}
           barcodeScannerSettings={{ barcodeTypes: ['qr'] }}
@@ -40,9 +39,9 @@ export default function ScanScreen() {
         <View style={styles.overlay}>
           <View style={[styles.targetFrame, { borderColor: theme.colors.primary }]} />
         </View>
-      </View>
+      </Card>
 
-      <Card style={[styles.resultCard, { backgroundColor: theme.colors.surface }]} mode="elevated">
+      <Card style={styles.resultCard} mode="md3">
         <Card.Content>
           <Text variant="titleMedium" style={{ marginBottom: 8, color: theme.colors.primary }}>
             Scanned Result
@@ -64,16 +63,9 @@ export default function ScanScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 24, justifyContent: 'space-between' },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
-  cameraContainer: { 
-    flex: 1.3, 
-    borderRadius: 24, 
-    overflow: 'hidden', 
-    marginBottom: 20, 
-    borderWidth: 1,
-    position: 'relative'
-  },
+  cameraCard: { flex: 1.2, borderRadius: 28, overflow: 'hidden', marginBottom: 20, elevation: 2 },
   overlay: { flex: 1, backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' },
-  targetFrame: { width: 200, height: 200, borderWidth: 3, borderRadius: 24, backgroundColor: 'transparent' },
-  resultCard: { flex: 0.7, borderRadius: 24, justifyContent: 'center', elevation: 2 },
+  targetFrame: { width: 200, height: 200, borderWidth: 2, borderRadius: 16, backgroundColor: 'transparent' },
+  resultCard: { flex: 0.8, borderRadius: 24, justifyContent: 'center' },
   resultText: { backgroundColor: 'transparent', paddingHorizontal: 0 }
 });
