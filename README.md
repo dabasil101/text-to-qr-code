@@ -10,7 +10,7 @@ The game features infinite progression, scaling difficulty, an organic layout fr
 
 * **Dynamic Scaling Matrix:** Starts on a compact $5 \times 5$ board layout (Level 1) and algorithmically scales up to a complex $10 \times 10$ layout around Level 8, expanding color counts and shifting move limits as complexity ramps up.
 * **Randomized Grid Origin:** No locked configurations. Every new stage seeds the starting source anchor at a completely randomized tile coordinate point $(r, c)$ inside the grid.
-* **Lively End-Game Overlays:** Seamless bouncy, spring-animated cards that pop up immediately upon a win or loss with goofy punchlines and minimal text.
+* **Lively End-Game Overlays:** Seamless boun   cy, spring-animated cards that pop up immediately upon a win or loss with goofy punchlines and minimal text.
 * **Faint Pastel Canvas Shifting:** The entire app wrapper smoothly transition-fades its background color among 5 faint pastels on a per-level basis.
 * **Clean Custom Layout Manager:** Features an edge-to-edge layout that respects mobile status bars and native device notches while maintaining a modern, floating, rounded tab navigation bar.
 * **Profile Center:** A dedicated tracking screen to view maximum historical level metrics and active win-streak values.
