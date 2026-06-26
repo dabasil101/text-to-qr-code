@@ -30,6 +30,7 @@ The game features infinite progression, scaling difficulty, an organic layout fr
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/your-username/color-flood.git](https://github.com/your-username/color-flood.git)
-   cd color-flood
-   <img width="1080" height="2340" alt="Screenshot_20260627_011710_color-flood" src="https://github.com/user-attachments/assets/e5555234-b1ba-49f7-bc46-3a0536386747" />
+   git clone [https://github.com/your-username/color-flood.git](https://github.com/your-username/color-flood.git)```
+
+   
+<img width="1080" height="2340" alt="Screenshot_20260627_011710_color-flood" src="https://github.com/user-attachments/assets/e5555234-b1ba-49f7-bc46-3a0536386747" />
